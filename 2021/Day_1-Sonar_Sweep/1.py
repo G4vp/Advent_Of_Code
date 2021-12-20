@@ -20,5 +20,3 @@ def Part_B(file):
         if next_item > previ_item: count += 1
     
     return count
-
-print(Part_B(r"AdventOfCode\2021\Sonar_Sweep\input.txt"))

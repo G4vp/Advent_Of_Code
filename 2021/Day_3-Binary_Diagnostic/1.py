@@ -63,5 +63,3 @@ def Part_B(file):
     return  int(O_list[0],2)*int(CO2_list[0],2)
 
 
-
-print(Part_B(r'AdventOfCode\2021\Day_3-Binary_Diagnostic\input.txt'))
