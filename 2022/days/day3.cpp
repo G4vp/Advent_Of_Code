@@ -52,21 +52,19 @@ int problem2(ifstream &file){
                     sort(str2.begin(),str2.end());
                     sort(str3.begin(),str3.end());
 
-                
                     set_intersection(str1.begin(),str1.end(),str2.begin(),str2.end(), back_inserter(intercept1));
 
                     sort(intercept1.begin(),intercept1.end());
 
                     set_intersection(intercept1.begin(),intercept1.end(),str3.begin(),str3.end(), back_inserter(intercept2));
 
-                    cout << intercept2 << endl;
                     if(intercept2[0] >= 65 && intercept2[0] <= 90){
                         total += int(intercept2[0]) - 38;
                     }
                     else{
                         total += int(intercept2[0]) - 96;
                     }
-                    cout << str1 + " " + str2 + " " + str3 << endl;
+
                     count = 0;
                     intercept1 = "";
                     intercept2 = "";
