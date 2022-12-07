@@ -39,14 +39,25 @@ int problem1(ifstream &file){
     }
     return ans;
 }
-
-
+    
 int problem2(ifstream &file){
     string line;
+    int ans = 0;
     while(getline(file,line)){
+        if(!line.empty()){
+            size_t ps = line.find(',');
+            string str1 = line.substr(0,ps);
+            string str2 = line.substr(ps+1,line.size());
 
+            vector<int> a = split(str1,'-');
+            vector<int> b = split(str2,'-');
+
+            if((a[0] <= b[1] && a[1] >= b[0])|| (a[0] >= b[1] && a[1] <= b[0])){
+                ans++;
+            }
+        }
     }
-    return 1;
+    return ans;
 }
 
 int main(){
