@@ -11,8 +11,8 @@ int problem1(ifstream &file){
     while(getline(file,line)){
         if(!line.empty()){
             string right, left, intercept;
-            right = line.substr(0,line.size()/2);
-            left = line.substr(line.size()/2,line.size());
+            left = line.substr(0,line.size()/2);
+            right = line.substr(line.size()/2,line.size());
 
             sort(right.begin(),right.end());
             sort(left.begin(),left.end());
